@@ -1,0 +1,24 @@
+@import "tailwindcss/components";
+
+@layer components {
+    .navbar {
+      @apply w-full bg-green-500 flex items-center
+    }
+
+    .nav-title{
+        @apply mx-5 py-2 text-white text-xl font-semibold
+    }
+
+    .nav{
+        @apply absolute right-40 flex
+    }
+
+    .nav-item{ 
+        @apply bg-green-200 px-5 py-1 rounded-md text-green-500 font-medium
+    }
+
+    .nav-item svg{ 
+        @apply text-green-800
+    }
+
+}
