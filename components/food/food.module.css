@@ -1,0 +1,23 @@
+.food{
+    @apply flex flex-wrap flex-col justify-center items-center shadow-md overflow-hidden
+}
+
+.food input{
+    @apply outline outline-2 outline-green-800 w-5/12 text-center rounded-md ml-1
+}
+
+.food button{
+    @apply rounded-md mt-2 mb-2 py-1 px-2
+}
+
+.price {
+    @apply font-medium 
+}
+
+.food-name {
+    @apply font-normal text-center w-full break-words
+}
+
+.amount-control{
+    @apply flex justify-center items-center w-full
+}

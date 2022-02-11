@@ -1,0 +1,4 @@
+.food-container{
+    @apply w-full bg-green-500 basis-full grid grid-cols-2
+    md:grid-cols-3 lg:grid-cols-4 gap-2 mt-3 p-2
+}

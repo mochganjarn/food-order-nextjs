@@ -1,6 +1,6 @@
 
 .navbar {
-  @apply w-full bg-green-500 flex items-center
+  @apply w-full bg-green-500 flex items-center shadow-md
 }
 
 .nav-title{
@@ -8,7 +8,7 @@
 }
 
 .nav{
-    @apply absolute right-28 flex
+    @apply absolute right-2 md:right-28 lg:right-28 flex
 }
 
 .nav-item{ 

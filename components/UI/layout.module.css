@@ -1,3 +1,4 @@
 .container {
-  @apply px-3 mx-auto my-6 flex justify-center items-center w-9/12
+  @apply px-3 mx-auto my-6 flex flex-wrap justify-center items-center w-full md:w-10/12
+  lg:w-10/12
 }
