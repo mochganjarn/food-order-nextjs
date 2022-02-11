@@ -1,0 +1,4 @@
+.banner{
+    @apply flex justify-center items-center shadow-md h-40 w-full bg-green-500 text-white
+    font-medium text-xl
+}

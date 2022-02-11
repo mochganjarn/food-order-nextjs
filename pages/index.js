@@ -1,16 +1,17 @@
 import Head from 'next/head'
 import Layout from '../components/UI/layout'
 import Navbar from '../components/Navbar/navbar'
+import Banner from '../components/banner/banner'
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title>My Food Cafe</title>
+        <title>GN-Food Cafe</title>
       </Head>
       <Navbar/>
       <Layout>
-        <div>Hallo</div>
+        <Banner/>
       </Layout>
     </>
   )
