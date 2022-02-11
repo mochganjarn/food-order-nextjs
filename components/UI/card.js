@@ -1,7 +1,6 @@
-import styles from './layout.module.css'
+import styles from './card.module.css'
 
-const Layout =(props)=>{
-
+const Card =(props)=>{
     return(
         <div className={`${styles.container} ${props.className}`}>
             {props.children}
@@ -9,4 +8,4 @@ const Layout =(props)=>{
     )
 }
 
-export default Layout
+export default Card

@@ -5,7 +5,7 @@ const Navbar =()=>{
     return(
         <>
             <div className={styles.navbar}>
-                <div className={styles['nav-title']}>MyFood App</div>
+                <div className={styles['nav-title']}>GN-Food App</div>
                 <div className={styles.nav}>
                     <div className={styles['nav-item']}>
                     <FontAwesomeIcon icon={['fas', 'cart-shopping']} />{' '}
