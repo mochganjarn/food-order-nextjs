@@ -1,4 +1,4 @@
-name: CI
+name: Instal Module and ESLint
 on: 
   pull_request:
     branches:
