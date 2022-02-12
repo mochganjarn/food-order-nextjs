@@ -1,0 +1,44 @@
+.backdrop{
+    @apply absolute w-full h-full backdrop-blur-sm bg-white/30 z-30 
+    flex justify-center items-center
+}
+
+.modal-container{
+    @apply w-11/12 md:w-2/4 lg:w-2/4 flex flex-col overflow-hidden relative
+}
+
+.modal-header > button{
+    @apply bg-green-800 text-white absolute right-1 px-3
+}
+
+.modal-header p{
+    @apply inline mx-5 text-white
+}
+
+.modal-header{
+    @apply bg-green-800 h-12 flex relative items-center
+}
+
+.modal-item{
+    @apply flex items-center relative
+}
+
+.right > button{
+    @apply w-7 h-7 text-xl 
+}
+
+.right{
+    @apply flex absolute right-2
+}
+
+.modal-content hr{
+    @apply border-none h-px bg-green-800
+}
+
+.modal-footer{
+    @apply flex h-10 w-full outline outline-1 outline-green-800
+}
+
+.modal-footer button{
+    @apply mx-2 rounded-sm px-2
+}
