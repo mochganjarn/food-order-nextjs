@@ -4,7 +4,7 @@
 }
 
 .modal-container{
-    @apply w-11/12 md:w-2/4 lg:w-2/4 flex flex-col overflow-hidden relative
+    @apply w-11/12 md:w-2/4 lg:w-2/4 flex flex-col overflow-hidden relative max-h-screen
 }
 
 .modal-header > button{
@@ -33,6 +33,10 @@
 
 .modal-content hr{
     @apply border-none h-px bg-green-800
+}
+
+.modal-content{
+    @apply overflow-scroll max-h-screen
 }
 
 .modal-footer{

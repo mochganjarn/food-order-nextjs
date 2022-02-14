@@ -8,6 +8,7 @@ const Input =(props)=>{
                 type={props.type}
                 max={props.max}
                 min={props.min}
+                value={props.value}
             />
         </>
     )
