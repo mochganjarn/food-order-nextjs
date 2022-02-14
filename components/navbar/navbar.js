@@ -1,11 +1,11 @@
 import styles from './navbar.module.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import GlobalContext from '../../store/GlobalContext'
+import { useContext } from 'react'
 
-const Navbar =(props)=>{
+const Navbar =()=>{
 
-    const cartClickHandler =()=>{
-        props.onCartClick(true)
-    }
+    const ctx = useContext(GlobalContext)
 
     return(
         <>
@@ -13,8 +13,8 @@ const Navbar =(props)=>{
                 <div className={styles['nav-title']}>GN-Food App</div>
                 <div className={styles.nav}>
                     <div className={styles['nav-item']}>
-                    <FontAwesomeIcon onClick={cartClickHandler} icon={['fas', 'cart-shopping']} />{' '}
-                        <span>0</span>
+                    <FontAwesomeIcon onClick={ctx.showModal} icon={['fas', 'cart-shopping']} />{' '}
+                        <span>{ctx.cart.length}</span>
                     </div>
                 </div>
             </div>

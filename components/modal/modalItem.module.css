@@ -1,0 +1,11 @@
+.modal-item{
+    @apply flex items-center relative p-2
+}
+
+.right > button{
+    @apply w-7 h-7 text-xl 
+}
+
+.right{
+    @apply flex absolute right-2
+}
