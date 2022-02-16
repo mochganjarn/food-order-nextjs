@@ -21,6 +21,23 @@ export default function Home() {
     document.querySelector('body').classList.add("overflow-hidden")
   }
 
+  const decreaseAmountHandler=(id)=>{
+    const index = cartFood.findIndex((element)=> element.id === id)
+    const found = cartFood.find(element=> element.id === id)
+    found.amount -= 1
+    if (found.amount === 0) {
+      cartFood.splice(index, 1)
+      console.log(cartFood)
+      const result = [...cartFood]
+      setChart(result)
+      return
+    }
+
+    cartFood.splice(index,1,found)
+    const result = [...cartFood]
+    setChart(result) 
+  }
+
   const addToCartHandler=(value)=>{
     if(cartFood.length>0){
       const found = cartFood.filter(element => element.id == value.id)
@@ -93,7 +110,8 @@ export default function Home() {
             foods:dummyFood,
             showModal:cartClickHandler,
             dismisModal:dismisModalHandler,
-            addToCart:addToCartHandler
+            addToCart:addToCartHandler,
+            decreaseAmount:decreaseAmountHandler
           }
         }>
         {showModal ? <Modal onDismisModal={dismisModalHandler}/>:null}

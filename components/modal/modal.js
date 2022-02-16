@@ -18,6 +18,7 @@ const Modal =()=>{
                 <div className={`${styles['modal-content']}`}>
                     {ctx.cart.length > 0 ? ctx.cart.map(cart => 
                        <ModalItem
+                            id={cart.id}
                             key={cart.id}
                             foodName={cart.name}
                             foodPrice={cart.price}

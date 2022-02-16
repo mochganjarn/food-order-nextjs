@@ -7,6 +7,7 @@ const GlobalContext = React.createContext(
         showModal:()=>{},
         dismisModal:()=>{},
         addToCart:(value)=>{},
+        decreaseAmount:(value)=>{},
     }
 );
 
