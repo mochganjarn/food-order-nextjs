@@ -10,6 +10,10 @@
     @apply rounded-md mt-2 mb-2 py-1 px-2
 }
 
+.food input[class="invalid"]:focus{
+    @apply outline outline-2 outline-red-600
+}
+
 .price {
     @apply font-medium 
 }
