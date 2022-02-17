@@ -43,8 +43,9 @@ export default function Home() {
       const found = cartFood.filter(element => element.id == value.id)
       if (found.length>0){
         found[0].amount+=value.amount
+        const index = cartFood.findIndex((element)=> element.id === value.id)
         const result = cartFood.filter(element => element.id != value.id)
-        result = [...result,found[0]]
+        result.splice(index,0,found[0])
         setChart(result)
       }else{
         setChart((prevState)=>{
