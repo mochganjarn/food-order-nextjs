@@ -6,8 +6,19 @@ import GlobalContext from '../../store/GlobalContext'
 
 const ModalItem =(props)=>{
     const ctx = useContext(GlobalContext)
+    
     const decreaseCartAmountHandler=()=>{
         ctx.decreaseAmount(props.id)
+    }
+
+    const increaseCartAmountHandler=()=>{
+        let food = {
+            id:props.id,
+            name:props.name,
+            amount:1,
+            price:props.price
+        }
+        ctx.addToCart(food)
     }
     return(
         <>
@@ -19,7 +30,7 @@ const ModalItem =(props)=>{
                             </div>
                             <div className={styles.right}>
                                 <Button onClick={decreaseCartAmountHandler} type="button" value="-"/>
-                                <Button type="button" value="+"/>
+                                <Button onClick={increaseCartAmountHandler} type="button" value="+"/>
                             </div>
             </div>
             <hr/>
