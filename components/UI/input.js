@@ -1,8 +1,10 @@
-const Input =(props)=>{
-    return(
+import React from "react"
+
+const Input = React.forwardRef((props,ref)=>(
         <>
             <label>{props.label}</label>
             <input
+                ref={ref}
                 onChange={props.onChange}
                 onBlur={props.onBlur}
                 type={props.type}
@@ -11,7 +13,7 @@ const Input =(props)=>{
                 value={props.value}
             />
         </>
-    )
-}
+))
+Input.displayName = "Input"
 
 export default Input
