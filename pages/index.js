@@ -4,12 +4,30 @@ import Navbar from '../components/navbar/navbar'
 import Banner from '../components/banner/banner'
 import ListFood from '../components/list_food/listFood'
 import Modal from '../components/modal/modal'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import GlobalContext from '../store/GlobalContext'
 
 export default function Home() {
   const [showModal,setShowModal] = useState(false)
   const [cartFood, setChart] = useState([])
+
+  useEffect(()=>{
+    setChart(()=>{
+      const cart  = localStorage.getItem("cart")
+      if(cart){
+        const initvalue = JSON.parse(cart)
+        return initvalue
+      }else{
+        return []
+      }
+    })
+  },[])
+
+  useEffect(()=>{
+    localStorage.setItem("cart",JSON.stringify(cartFood))
+    
+  },[cartFood])
+
 
   const dismisModalHandler=()=>{
     setShowModal(false)
@@ -35,7 +53,7 @@ export default function Home() {
 
     cartFood.splice(index,1,found)
     const result = [...cartFood]
-    setChart(result) 
+    setChart(result)
   }
 
   const addToCartHandler=(value)=>{
