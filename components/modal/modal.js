@@ -28,9 +28,9 @@ const Modal =()=>{
                 </div>
                 <div className={`${styles['modal-footer']}`}>
                     <Button type="button" value="Buy"/>
-                    <Button type="button" value="Cancel"/>
+                    <Button onClick={ctx.dismisModal} type="button" value="Cancel"/>
                     <div className={styles.right}>
-                        Total:{' '}${total}
+                        Total:{' '}${total.toFixed(2)}
                     </div>
                 </div>
             </Card>
